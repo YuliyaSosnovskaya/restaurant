@@ -1,0 +1,875 @@
+/*
+for card font-family: 'Julius Sans One', sans-serif;
+for categories font-family: 'Lexend Zetta', sans-serif;
+*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:active,button:focus {
+  outline: none;
+}
+/*modal window*/
+label {
+  display: block;
+  padding-left: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #f3f1f1f7;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  margin: 10px 0 15px;
+  border-width: 0;
+  line-height: 40px;
+  border-radius: 20px;
+  color: white;
+  background-color: #e3dfdfbd;
+  font-family: 'Julius Sans One', sans-serif;
+  outline-style: none;
+  letter-spacing: 2.5px;
+  font-size: 18px;
+}
+input:focus {
+  background-color:  #e3dfdfbd ;
+}
+.input-name:invalid,#tel:invalid{
+  background-color: #070303c4;
+}
+.input-name:valid,#tel:valid { 
+  background-color: #e3dfdfbd;
+  color: #030101;
+  font-weight: bold;
+}
+.modal-sanks {
+  margin: 20px;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 22px;
+  color: azure;
+  letter-spacing: 3px;
+}
+.ok-button {
+  background-color:  #070303c4;  
+}
+.submit {
+  width: 50%;
+  margin: 0 auto;
+  background: #090808e3;
+  font-size: 18px; 
+}
+.submit:focus{
+  background-color: #090808fb;
+  box-shadow: 0px 0px 5px 2px #e1dcdce8;
+}
+.modal {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:#000000cc; 
+  z-index: 1050;
+  opacity: 0; 
+  transition: opacity 200ms ease-in; 
+  pointer-events: none; 
+  margin: 0;
+  padding: 0;
+}
+/* shown modal */
+.modal:target {
+  transition: 0.5s;
+  opacity: 1; 
+  pointer-events: auto; 
+  overflow-y: auto; 
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 30%;
+    margin: 100px auto; 
+  }
+} 
+.modal-content {
+  background: url(../img/fon8.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-clip: padding-box;
+  border-radius: 15px;
+  outline: none;
+}
+@media (min-width: 768px) {
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 19px;
+  color: white;
+}
+/* close button */
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgb(211, 205, 205);
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  text-decoration: none;
+}
+.close:focus, .close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+.modal-body {
+  background-color: #bababa40;
+  position: relative;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+/*------------------------------header---------------------------------------------*/
+.header {
+  background-color: #ffffff;
+  height: 65px;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  top: 20px;
+  z-index: 1;
+  box-shadow: 0 1px 18px #ccc2c2; 
+}
+.logo-name {
+  font-family: 'Cinzel', serif;
+  font-size: 45px;
+  color:#363636;
+}
+.logo-name span {
+  color:#A3000F;
+  font-family: 'Cinzel', serif;
+}
+.categories a,.categories2 a {
+  font-size: 19px;
+  font-family: 'Cinzel', serif;
+  color: #363636;
+  font-weight: bold;
+}
+.categories a:hover{
+  color: #b22936;
+}
+.categories span{
+  margin-right:20px;
+  padding-bottom:5px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.categories2 {
+  box-shadow: rgb(204, 194, 194) 0px 10px 14px -5px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #ffffff;
+  text-align: center;
+  position: fixed;
+  top: 85px;
+  line-height: 2;
+  transition: 1.5s;
+}
+.navbar-button {
+  background: transparent;
+  padding: 5px;
+  border: 1px solid #dbd4d405;
+}
+.navbar-button-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(../img/icon-menu.png) no-repeat center;
+  vertical-align: middle;
+}
+.photoblock {
+  height: 580px;
+  background: url(../img/Layer1.png) no-repeat;
+  background-size: cover;
+  background-position: 55% 43%;
+  position: relative;
+  box-shadow: 0 0px 18px #ccc2c2;
+}
+.photo-text {
+  width: 550px;
+  padding:50px;
+  bottom:13%;
+  left:15%;
+  position: absolute;
+  border:2px solid #ebebeb;
+}
+.title{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 30px;
+  margin-bottom:20px;
+  line-height: 1.3;
+  font-weight: normal;
+}
+
+/*BOOK table*/
+.book-table {
+  padding: 4% 10%;
+  display: flex;
+  justify-content: space-around;
+}
+.image-block {
+  position: relative;
+}
+.image-block div:nth-child(1) {
+  background: url(../img/book1.png) no-repeat center;
+  width: 400px;
+  height: 420px;
+  background-size: cover;
+}
+.image-block div:nth-child(2) {
+  position: absolute;
+  width: 275px;
+  height: 310px;
+  left: 200px;
+  top: 50px;
+  background: url(../img/book2.png) no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.right-book p {
+  padding-top: 15px;
+  font-weight: 600;
+  width: 350px;
+}
+.right-book h2 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-weight: normal;
+}
+.right-book button {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 240px;
+  height: 50px;
+  background-color: #363636;
+  color: white;
+  border: none;
+  font-size: 17px;
+  letter-spacing: 6px;
+  border-radius: 5px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.right-book button:hover,.right-reserve button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+/*MENU*/
+.menu ,.blog {
+  background-color: #FBF4EB;
+  padding: 55px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-h2,.blog-h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+}
+.menu-text {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px; 
+}
+.menu-text div {
+  width: 400px;
+  margin: 30px 0;
+}
+.container-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.container-menu div {
+  display: flex;
+  align-items: center;
+  width: 285px;
+  height: 285px;
+}
+.container-menu div:hover{
+  cursor: pointer;
+}
+.container-menu div span{
+  text-align: center;
+  padding: 4%;
+  width: 100%;
+  background-color: #f0f8ffab;
+  font-size: 28px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.arrow-container {
+  display: flex;
+  justify-content: center;
+}
+.arrow-container button {
+  margin-top: 35px;
+  border: none;
+  width: 100px;
+  height: 28px;
+  background-color: #736357;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.arrow-container button:hover {
+  background-color: #464646;
+  cursor: pointer;
+}
+.arrow-container button svg {
+  width: 25px;
+}
+.arrow-container button:nth-child(2) svg{
+  transform: rotate(180deg);
+}
+
+/*CHEFS*/
+.container-chefs {
+  padding:3% 7%;
+}
+.container-chefs h2 {
+  margin-top: 35px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+}
+.container-cart {
+  padding-top: 40px;;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card-1 {
+  width: min-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.photo-shef1 {
+  background: url(../img/chef1.png) no-repeat center;
+  background-size: cover;
+  background-position: 25%;
+  width: 360px;
+  height:300px;
+  transition: 0.5s;
+}
+.photo-shef2 {
+  background: url(../img/chef2.png) no-repeat;
+  background-size: cover;
+  background-position: 30%;
+  width: 360px;
+  height:300px;
+  transition: 0.5s;
+}
+.photo-shef3 {
+  background: url(../img/chef3.png) no-repeat center;
+  background-size: cover;
+  background-position:0 25%;
+  width: 360px;
+  height:300px;
+  transition: 0.5s;
+}
+.photo-shef3:hover,.photo-shef2:hover,.photo-shef1:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.under-photo p {
+  padding-top:10px;
+}
+.icons-container {
+  padding: 10px;
+}
+.icons-container a img {
+  filter: grayscale(0.7);
+  transition: 0.5s;
+  width:25px;
+}
+.icons-container a img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+/*BLOG*/
+.blog-h2-p {
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 20%;
+  text-align: center;
+}
+.blog-photo {
+  width: 350px;
+  height: 350px;
+  background: url(../img/blog1.png) no-repeat;
+}
+.container-blog {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card-blog {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+}
+.blog-photo1 {
+  width: 310px;
+  height: 250px;
+  background: url(../img/blog1.png) no-repeat center;
+  background-size:cover;
+}
+.blog-photo2 {
+  width: 310px;
+  height: 250px;
+  background: url(../img/blog2.png) no-repeat center;
+  background-size:cover;
+}
+.blog-photo3 {
+  width: 310px;
+  height: 250px;
+  background: url(../img/blog3.png) no-repeat center;
+  background-size:cover;
+}
+.under-photo-card h2 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+}
+
+/* reviews*/
+.reviews {
+  margin: 5% 0;
+}
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 23%;
+  flex-wrap: wrap;
+}
+.left-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.reviews h2 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  line-height: 1.3;
+  font-size: 35px;
+  padding-left: 25%;
+}
+.review-block {
+  border: 1px solid #E8E8E8;
+  padding-left: 17%;
+  padding-top: 10%;
+  padding-right: 7%;
+  width: 390px;
+  height: 290px;
+  box-shadow: 22px 21px 25px -19px #e1e0e0;
+  position: relative;
+}
+.review-block  p{
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+.review-block span{
+  color:#770A03;
+  font-weight: bold;
+  font-size: 19px;
+}
+.review-block small {
+  display: block;
+}
+.right-review .review-block {
+  height: 250px;
+}
+.photo-left {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  background-size: cover;
+  top: 50px;
+  left: -50px;
+}
+.photo-right {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  background-size: cover;
+  top: 50px;
+  right: -50px;
+}
+.photo-review1 {
+  background: url(../img/review-photo1.png) no-repeat center;
+}
+.photo-review2 {
+  background: url(../img/review-photo2.png) no-repeat center;
+}
+.photo-review3 {
+  background: url(../img/design33.jpg) no-repeat center;
+}
+.photo-review4 {
+  background: url(../img/review-photo1.png) no-repeat center;
+}
+.photo-review5 {
+  background: url(../img/menu1.png) no-repeat center;
+}
+.photo-review6 {
+  background: url(../img/recipe7.jpg) no-repeat center
+}
+.reviews-buttons {
+  display: flex;
+  justify-content:center;
+  margin: 30px auto;
+}
+.reviews-buttons button {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #C7C7C7;
+  border: none;
+  border-radius:50%;
+}
+.reviews-buttons .active {
+  background-color: #464646;
+  border: none;
+}
+ 
+/*reserv*/
+.reserve {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.photo-reserve {
+  font-family: 'Cinzel', serif;
+  box-shadow: 10px 20px 26px 2px #cccbcb;
+  padding: 20px 40px;
+  text-align: right;
+  color: white;
+  width: 45%;
+  height: 400px;
+  background: url(../img/reserve.png) no-repeat ;
+  background-size: cover;
+}
+.photo-reserve h2 {
+  margin-bottom: -22px;
+  font-weight: normal;
+  font-size: 100px;
+  font-family: 'Cinzel', serif;
+}
+.right-reserve {
+  width: 45%;
+}
+.right-reserve h2 {
+  font-size: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  margin: 20px 0;
+  line-height: 1.4;
+}
+.right-reserve p {
+  width: 60%;
+}
+.right-reserve button {
+  margin-top: 50px;
+  width: 60%;
+  height: 50px;
+  background-color: #363636;
+  color: white;
+  border: none;
+  font-size: 17px;
+  letter-spacing: 6px;
+  border-radius: 5px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.call {
+  font-size: 22px;
+  margin-top: 15px;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  color: #464646;
+}
+/*ABOUT US*/
+.about-us {
+  margin: 4% 13%;
+  padding: 4%;
+  display: flex;
+  justify-content: space-around;
+  border: 10px solid #cccccc;
+}
+.about-us div {
+  width: 40%;
+  text-align: center;
+}
+.about-us div h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: normal;
+  margin: 20px 0;
+}
+.about-us-right {
+  line-height: 2.2;
+}
+.about-us-left p{
+  margin-bottom: 10px;
+}
+.read-more {
+  font-weight: bold;
+}
+
+ /*FOOTER*/
+footer {
+  padding:0 20%;
+  height: 100px;
+  background-color:#252525;
+  color: white;
+}
+.footer {
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+address {
+  text-align: center;
+}
+
+/*-----------------------------BLOG---------------------------------------------------------*/
+.photoblock2 {
+  height: 400px;
+  background: url(../img/fon7.jpg) no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  box-shadow: 0 0px 18px #ccc2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-text2,.photo-text3 {
+  padding: 20px;
+  text-align: center;
+  border:2px solid #aeaeaea6
+}
+.title2,.title3 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 46px;
+} 
+.photo-text2 p {
+  color:#000000de;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top:10px;
+}
+.blog-container {
+  padding:0 15%;
+  min-height: 250px;
+}
+.navigation-blog {
+  height:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation-blog span {
+  color: #464646;
+  font-weight: bold;
+  opacity: 0.5;
+  padding: 0 10px;
+}
+.navigation-blog span:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.posts-container {
+  display: flex;
+  justify-content: space-between;
+}
+.column-post {
+  max-width: 50%;
+}
+.post {
+  margin-bottom: 35px;
+}
+.post img {
+  width:94%;
+}
+.text-under-post {
+  padding-left: 5%;
+}
+.text-under-post h3 {
+  color: #464646;
+  font-size: 23px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-family: cursive;
+}
+.text-under-post p{
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding-right: 40px;
+}
+.text-under-post span{
+  font-size: 13px;
+  letter-spacing: 2.5px;
+}
+
+/*load-more-posts button*/
+.load-more-posts {
+  width: 100%;
+  height: 100px;
+  background-color: #c7c7c7;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5c5a5a;
+  border: none;
+  cursor: pointer;
+}
+.load-more-posts:hover {
+  color: #262525;
+}
+/*MINI-BLOG*/
+.photoblock4 {
+  height: 450px;
+  background: url(../img/recipe1.jpg) no-repeat center;
+  background-size: cover;
+  box-shadow: 0 0px 18px #ccc2c2;
+}
+
+.blog-container2 {
+  padding: 4% 20%;
+}
+.blog-container2 h1{
+  font-size: 40px;
+  color: #313030;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.date{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.blog-container2 img {
+  width: 98%;
+}
+.blog-container2 p{
+  color:#464646;
+  font-size: 20px;
+  margin:20px 0;
+  line-height: 1.6;
+}
+.blog-container2 ul,.blog-container2 ol {
+  margin: 20px;
+  font-size: 20px;
+}
+.blog-container2 h4 {
+  font-size: 22px;
+}
+#bon-appetit {
+  text-align: center;
+  font-size: 42px;
+  color: #770A03;
+  font-family: 'Cinzel', serif;
+}
+.battons-pagination {
+  color:#494949e6;
+  font-size: 19px;
+  width: 100%;
+  height: 100px;
+  background-color: #c7c7c7; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.battons-pagination a:hover {
+  color: #252525;
+}
+.center {
+  font-size: 50px;
+}
+.left:before {
+  content: "‹";
+  padding-right: 20px;
+  font-size: 28px;
+}
+.right:after {
+  content: "›";
+  padding-left: 20px;
+  font-size: 28px;
+}
+/*-----------------------------------------------MENU----------------------------------------------*/
+.photoblock3 {
+  height: 400px;
+  background: url(../img/cake1.jpg) no-repeat;
+  background-position: 0px 23%;
+  background-size: cover;
+  box-shadow: 0 0px 18px #ccc2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-text3 {
+  width: 270px;
+  color: #fafafa;
+  padding: 20зч;
+  text-align: center;
+  border: 2px solid #f1eeeea6;
+}

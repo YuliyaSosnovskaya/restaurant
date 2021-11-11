@@ -1,0 +1,276 @@
+@media all and (max-width: 1800px){
+  .categories2 {
+    display: none;
+  }
+  .navbar-button{
+    display: none;
+  }
+  .reviews-container{
+    padding:3% 19%;
+  }
+}
+@media all and (max-width: 1280px){
+  .reviews-container {
+    padding:3% 15%;
+  }
+  .book-table {
+    justify-content: space-between;
+  }
+}
+@media all and (max-width: 1160px){
+  .logo-name {
+    font-size: 38px;
+  }
+  .photoblock {
+    background-size: inherit;
+    background-position: 42% 50%;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photo-text {
+    text-align: center;
+    position: static;
+  }
+  .book-table {
+    padding: 4%;
+  }
+  .image-block div:nth-child(2) {
+    display: none;
+  }
+  .menu {
+    height: auto;
+    padding: 55px 1%;
+  }
+  .container-menu {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .container-menu div {
+    width: 370px;
+    height: 370px;
+    margin: 20px 0;
+  }
+  .card-1 {
+    margin-bottom: 40px;
+  }
+  .right-reserve p {
+    width: 80%;
+  }
+  .call {
+    font-size: 19px;
+  }
+  .blog {
+    padding:55px 1%;
+  }
+  .about-us div h2{
+    font-size: 25px;
+  }
+  .reviews h2 {
+    text-align: center;
+    padding-left: 0;
+  }
+  .reviews-container {
+    padding: 3% 8%;
+  }
+  .review-block{
+    margin-top: 10px;
+  }
+}
+@media all and (max-width: 798px) {
+  .logo-name {
+    font-size: 27px;
+  }
+  .categories a {
+    font-size: 17px;
+  }
+  .categories span {
+    margin-right: 10px;
+  }
+  .book-table {
+    text-align: center;
+    display: block;
+    padding: 4% 0;
+  }
+  .right-book p{
+    margin: 0 auto;
+  }
+  .right-book h2{
+    margin-top: 30px;
+  }
+  .image-block div:nth-child(1){
+    width: auto;
+  }
+  .reserve{
+    justify-content: space-evenly;
+  }
+  .right-reserve h2{
+    font-size: 20px;
+  }
+  .photo-shef1,.photo-shef2,.photo-shef3 {
+    width: 420px;
+    height: 420px;
+  }
+  .menu-text {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .menu-text div {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+  .right-reserve button {
+    width: 80%;
+  }
+  .call {
+    width: 80%;
+  }
+  .blog {
+    height: auto;
+
+  }
+  .card-blog{
+    margin-top: 40px;
+  }
+  .blog-photo1,.blog-photo2,.blog-photo3 {
+    width: 420px;
+    height: 350px;
+  }
+  .reviews-container {
+    justify-content: center;
+  }
+  .left-review {
+    margin-bottom: 40px;
+  }
+  .about-us {
+    padding: 0%;
+    margin:4%;
+    display: block;
+  }
+  .about-us div {
+    width: 100%;
+  }
+  .blog-container2 {
+    padding: 4% 10%;
+}
+  footer{
+    padding: 0px 2%;
+  }
+}
+@media all and (max-width: 485px) {
+  .title {
+    font-size: 25px;
+  }
+  .navbar-button{
+    display: block;
+  }
+  .categories {display: none;}
+  .column-post {
+    max-width: 100%;
+  }
+  .posts-container {
+    flex-wrap: wrap;
+  }
+  .photo-text{
+    width: 300px;
+    padding: 15px;
+  }
+  .book-table {
+    justify-content: center;
+    padding: 0%;
+    display: block;
+  }
+  .image-block div:nth-child(1){
+    width: auto;
+  }
+  .container-menu div {
+    width: 200px;
+    height: 200px;
+  }
+  .photo-shef1, .photo-shef2, .photo-shef3 {
+    width: 320px;
+    height: 320px;
+  }
+  .blog-photo1, .blog-photo2, .blog-photo3 {
+    width: 320px;
+    height: 350px;
+  }
+  .reserve{
+    justify-content: space-evenly;
+  }
+  .right-reserve h2{
+    font-size: 20px;
+  }
+  .right-reserve button,.call {
+    width: 400px;
+    margin-left: -205px;
+  }
+  .photo-reserve h2 {
+    font-size: 45px;
+    margin-bottom: 0;
+  }
+  .photo-left,.photo-right{
+    width: 80px;
+    height: 80px;
+    left: -15px;
+  }
+  .reviews-container{
+    padding: 3% 0;
+  }
+  .review-block{
+    padding-right: 0%;
+    padding-left: 19%;
+    width: 365px;
+  }
+  .footer{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media all and (max-width: 395px) {
+  .logo-name {
+    font-size: 25px;
+  }
+  .container-menu div {
+    width: 180px;
+    height: 180px;
+  }
+  .right-reserve button, .call {
+    width: 350px;
+    margin-left: -180px;
+  }
+  .photo-reserve{
+    height: 470px;
+  }
+  .post img {
+    width: 100%;
+  }
+  .text-under-post p {
+    padding-right: 0;
+  }
+  .blog-container {
+    padding: 0;
+  }
+  .blog-container2 ul, .blog-container2 ol {
+    font-size: 14px;
+  }
+  .blog-container2 p,.battons-pagination {
+    font-size: 16px;
+  }
+  .blog-container2 h1 {
+    font-size: 30px;
+  }
+  #bon-appetit {
+    font-size: 30px;
+  }
+  .left:before  {
+    padding-right: 5px;
+  }
+  .right:after {
+    padding-left: 5px;
+  }
+  .center {
+    display: none;
+  }
+}

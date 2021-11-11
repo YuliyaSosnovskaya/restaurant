@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/main-icon.png" type="image/x-icon">
+    <title>QASARestaurant</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lexend+Zetta&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+  </head>
+  <body>
+      <!--modal-->
+      <div id="openModal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">BOOK A TABLE</h3>
+              <a href="#" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body"> 
+              <form onsubmit="location.href ='#book-table'">
+                <label for="name">name</label>
+                <input class="input-name" type="text" id="name" autocomplete="off"  placeholder="letters only"  required pattern="[A-Za-zА-Яа-яЁё]{3,}">
+                <label for="tel">tel</label>
+                <input type="tel" id="tel"  autocomplete="off" placeholder="+375( )___-__-__" required pattern="+375[0-9]" minlength="13" maxlength="13" >
+                <input class='submit' type="submit" value="book a table">
+              </form>   
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="book-table" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title"></h3>
+              <a href="#" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body"> 
+              <p class="modal-sanks">Спасибо скоро вам перезвонят!</p> 
+              <input type="button" class="ok-button" value="OK" onclick="location.href ='#'">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--HEADER-->
+      <div class="header">
+        <div class="logo-name">    
+          <span class="red-name">QASA</span>Restaurant
+        </div>
+        <div class="categories">
+          <span><a href="#">main</a></span>
+          <span><a href="#chefs">chefs</a></span>
+          <span><a href="main-blog.html">read blog</a></span>
+          <span><a href="#contact">contact</a></span>
+        </div>
+        <button class="navbar-button">
+          <span class="navbar-button-icon"></span>
+        </button>
+        <div class="categories2">
+          <span><a href="#">main</a></span>
+          <span><a href="#chefs">chefs</a></span>
+          <span><a href="main-blog.html">read blog</a></span>
+          <span><a href="#contact">contact</a></span>
+        </div>
+      </div>
+      
+      <!--PHOTOBLOCK-->
+      <div class="photoblock">
+        <div class="photo-text">
+          <h2 class="title">Tasteiest and<br> Mouth Watering <br>Menus in New York</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo at, porro temporibus, nostrum fuga cumque, minus eligendi impedit quaerat pariatur cum odio consequatur voluptates exercitationem aliquam! Sequi enim minima dicta.</p>
+        </div>
+      </div>
+      <!--BOOK TABLE-->
+      <div class="book-table">
+        <div class="left-book">
+          <div class="image-block">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="right-book">
+          <h2>Qasa Serves Contemporary <br>European Cuisine.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Soluta laboriosam, commodi quidem non similique nostrum natus qui aut.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis perspiciatis ipsa expedita ad, delectus sint illo hic veniam illum laudantium!</p>
+          <a href="#openModal"><button >BOOK A TABLE</button></a>
+        </div>
+      </div>
+      <!--MENU-->
+      <div class="menu">
+        <h2 class="menu-h2">browse Our Menu’s</h2>
+        <div class="menu-text">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi facilis adipisci minus, ut harum ducimus, asperiores, non beatae veniam ipsum unde fuga?</div>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae dolor omnis, nisi tempora placeat reprehenderit amet nam aperiam magnam?</div>
+        </div>
+        <div class="container-menu" id="containerMenu"></div>
+        <div class="arrow-container">
+          <button id="leftCaruselButton"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 32 32"  id="Слой_1" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M31.106,15H3.278l8.325-8.293  c0.391-0.391,0.391-1.024,0-1.414c-0.391-0.391-1.024-0.391-1.414,0l-9.9,9.899c-0.385,0.385-0.385,1.029,0,1.414l9.9,9.9  c0.391,0.391,1.024,0.391,1.414,0c0.391-0.391,0.391-1.024,0-1.414L3.278,17h27.828c0.552,0,1-0.448,1-1  C32.106,15.448,31.658,15,31.106,15z" fill="#ffffff" fill-rule="evenodd" id="Arrow_Back"/><g/><g/><g/><g/><g/><g/></svg></button>
+          <button id="rightCaruselButton"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 32 32"  id="Слой_1" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M31.106,15H3.278l8.325-8.293  c0.391-0.391,0.391-1.024,0-1.414c-0.391-0.391-1.024-0.391-1.414,0l-9.9,9.899c-0.385,0.385-0.385,1.029,0,1.414l9.9,9.9  c0.391,0.391,1.024,0.391,1.414,0c0.391-0.391,0.391-1.024,0-1.414L3.278,17h27.828c0.552,0,1-0.448,1-1  C32.106,15.448,31.658,15,31.106,15z" fill="#ffffff" fill-rule="evenodd" id="Arrow_Back"/><g/><g/><g/><g/><g/><g/></svg></button>
+        </div>
+      </div>
+      <!--CHEFS-->
+      <div class="container-chefs" id="chefs">
+        <h2> Meet Experienced Chef’s</h2>
+        <div class="container-cart">
+          <!--1-->
+          <div class="card-1">
+            <div class="photo-shef1"></div>
+            <div class="under-photo">
+              <h2>MARK SMITH</h2>
+              <span>( CHIEF CHEF )</span>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem in voluptas commodi tempore, eum animi! Omnis, adipisci inventore! Minus repellat, iste totam saepe amet aperiam nisi rerum soluta cum?</p>
+              <div class="icons-container">
+                <a href="#"><img src="img/3721672-instagram_108066.png" alt="icon instagram"></a>
+                <a href="#"><img src="img/linkedin_socialnetwork_17441.png" alt="icon linkedin"></a>
+                <a href="#"><img src="img/social_facebook_box_blue_256_30649.png" alt="icon facebook"></a>
+                <a href="#"><img src="img/3721672-instagram_108066.png" alt="icon twitter"></a>
+              </div>
+            </div>
+          </div>
+
+    <!--2-->
+          <div class="card-1">
+            <div class="photo-shef2"></div>
+            <div class="under-photo">
+              <h2>HARRISON</h2>
+              <span> ( SENIOR CHEF )</span>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem in voluptas commodi tempore, eum animi! Omnis, adipisci inventore! Minus repellat, iste totam saepe amet aperiam nisi rerum soluta cum?</p>
+              <div class="icons-container">
+                <a href="#"><img src="img/insta.ico" alt="icon instagram"></a>
+                <a href="#"><img src="img/linkedin.ico" alt="icon linkedin"></a>
+                <a href="#"><img src="img/facebook.ico" alt="icon facebook"></a>
+                <a href="#"><img src="img/twitter.ico" alt="icon twitter"></a>
+              </div>
+            </div>
+          </div>
+          <!--3-->
+          <div class="card-1">
+            <div class="photo-shef3"></div>
+            <div class="under-photo">
+              <h2>JOSEPH</h2>
+              <span>( SENIOR CHEF )</span>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem in voluptas commodi tempore, eum animi! Omnis, adipisci inventore! Minus repellat, iste totam saepe amet aperiam nisi rerum soluta cum?</p>
+              <div class="icons-container">
+                <a href="#"><img src="img/insta.ico" alt="icon instagram"></a>
+                <a href="#"><img src="img/linkedin.ico" alt="icon linkedin"></a>
+                <a href="#"><img src="img/facebook.ico" alt="icon facebook"></a>
+                <a href="#"><img src="img/twitter.ico" alt="icon twitter"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--reserve table-->
+      <div class="reserve">
+        <div class="photo-reserve">
+          <div>
+            <h2>QASA</h2>
+            <span>RESTAURANT</span>
+          </div>
+        </div>
+        <div class="right-reserve">
+          <h2>BEST PLACE TO DINE<br>WITH FRIENDS & FAMILY</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sequi est debitis, aperiam qui veniam mollitia eligendi laudantium quos culpa ab facere ipsam reprehenderit corrupti vero iure. Cumque, nobis recusandae!</p>
+          <a href="#openModal"><button>RESERVE A TABLE</button></a>
+          <div class="call"><span>OR CALL :</span><a href="tel:1-800-123-456789"> 1-800-123-456789 </a></div>
+        </div>
+      </div>
+
+    <!--BLOG-->
+      <div class="blog">
+        <h2 class="blog-h2">READ BLOG ARTICLES</h2>
+          <p class="blog-h2-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi facilis adipisci minus, ut harum ducimus, asperiores, non beatae veniam ipsum unde fuga?</p>
+        <div class="container-blog">
+          <div class="card-blog">
+            <div class="blog-photo1"></div>
+            <div class="under-photo-card">
+              <h2>Make Dirt Pudding Just Like Mom Used To do</h2>
+            </div>
+          </div>
+          <div class="card-blog">
+            <div class="blog-photo2"></div>
+            <div class="under-photo-card">
+              <h2>Make Dirt Pudding Just Like Mom Used To do</h2>
+            </div>
+          </div>
+          <div class="card-blog">
+            <div class="blog-photo3"></div>
+            <div class="under-photo-card">
+              <h2>Make Dirt Pudding Just Like Mom Used To do</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--Reviews-->
+      <div class="reviews" >
+        <h2>Read our client’s <br>testimonials...</h2>
+        <div class="reviews-container" id="reviewsContainer"></div>
+        <div class="reviews-buttons" id="reviewsButtons">
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+      <!--about us-->
+      <div class="about-us" id="contact">
+        <div class="about-us-left">
+          <h2>ABOUT QASARESTAURANT</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam numquam fugiat nostrum, expedita excepturi hic optio id aliquam voluptas aspernatur ea incidunt, pariatur deleniti facere aut voluptatibus mollitia officia quas.</p>
+          <a href="#" class="read-more">Read more...</a>
+        </div>
+        <div class="about-us-right">
+          <h2>CONTACT US</h2>
+          <p>4th Floor, Amira Building, 123 North Side Street, Sydney, Australia - 45678</p>
+          <a href="tel:1-800-123-456789">tel: 1-800-123-456789 </a>
+          <p>Mon–Sat: 8:00am–6:00pm / Sunday: Closed</p>
+        </div>
+      </div>
+      <!--FOOTER-->
+      <footer>
+        <div class="footer">
+          <a href="">HOME</a>
+          ~
+          <a href="#contact">ABOUT US</a>
+          ~
+          <a href="#reviewsContainer">CLIENT TESTIMONIALS</a>
+          ~
+          <a href="#contact">CONTACT US</a>
+        </div>
+        <address>(C) 2020.Created by Yuliya Sosnovskaya </address>
+      </footer>
+    <!--THE END-->
+      <script type="module" src="js/navbar.js"></script>
+      <script type="module" src="js/menu-cards-carusel.js"></script>
+      <script type="module" src="js/reviews-carusel.js"></script>
+    </body>
+</html>    
